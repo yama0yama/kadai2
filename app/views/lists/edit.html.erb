@@ -1,0 +1,19 @@
+<div>
+  <%= flash[:notice] %>
+</div>
+
+<h1>Editing Book</h1>
+<%= form_with model: @list, url: update_list_path(@list.id), method: :patch do |f| %>
+
+  <h4>Title</h4>
+  <%= f.text_field :title %>
+  
+  <h4>Body</h4>
+  <%= f.text_area :body %>
+  
+  <%= f.submit 'Update Book' %>
+  
+  <%= link_to "Show", show_list_path(@list.id) %>
+  <%= link_to "Back", index_list_path(@list.id) %>
+  
+<% end %>
