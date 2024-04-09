@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
-  get '' => 'homes#top'
+  root 'homes#top'
+  get "" => 'homes#top'
   resources :books
-  
+
 end
